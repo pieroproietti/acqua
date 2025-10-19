@@ -4,8 +4,9 @@ echo "v17-process.sh - Metodo Frankenstein (Append) con UDEV"
 
 # --- IMPOSTAZIONI ---
 OVERLAY_DIR="my-initrd-overlay"  # Assicurati che lo script sia in scripts/local-top/
-BASE_INITRD="/home/eggs/iso/live/initrd.img-6.12.48+deb13-amd64" # Il 70MB (funzionante)
-FINAL_INITRD="luks-initrd.img-6.12.48+deb13-amd64" # Il nostro ~84MB
+BASE_INITRD="/home/eggs/iso/live/initrd.img-$(uname -r)" # Il 70MB (funzionante)
+echo $BASE_INITRD
+FINAL_INITRD="luks-initrd.img-$(uname -r)" # Il nostro ~84MB
 STAGING_CRYPT=./staging_crypt # Staging solo per i nostri file
 CRYPT_CPIO="crypt-overlay.cpio" # Il nostro archivio
 CHROOT_PATH="/"
