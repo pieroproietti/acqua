@@ -1,9 +1,0 @@
-#!/bin/bash
-set x
-
-sudo cp luks-initrd.img-6.12.48+deb13-amd64 /home/eggs/iso/live/
-sudo /home/eggs/ovarium/mkisofs 
-eggs export iso -c
-
-
-
